@@ -8,7 +8,7 @@ chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.binary_location = '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
 
-driver = webdriver.Chrome(executable_path=os.path.join(os.getcwd() + "/chromedriver"), chrome_options=chrome_options)
+driver = webdriver.Chrome(executable_path=os.path.join(os.getcwd(), "chromedriver"), chrome_options=chrome_options)
 driver.get("http://www.duo.com")
 magnifying_glass = driver.find_element_by_id("js-open-icon")
 if magnifying_glass.is_displayed():
